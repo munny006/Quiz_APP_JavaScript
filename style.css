@@ -2,10 +2,12 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Scheherazade New', serif;
-	border-radius: 48px 48px!important;
+		border-radius: 48px;
+	
 }
 body{
 	background-color: #f1f1f1;
+
 
 
 }
@@ -18,9 +20,91 @@ body{
 	background-color: #fff;
 	box-shadow: rgb(0 0 0 /10%) 0px 10px 50px;
 	transform: translate(-50%,-50%);
+
     
 }
 .img img{
 	width: 100%;
 
+}
+.text{
+	width: 90%;
+	margin: auto;
+}
+.text h3{
+	margin-top: 20px;
+}
+.MyButton{
+	width: 60%;
+	margin-top: -21px;
+	margin-left: 187px!important;
+}
+.MyButton button{
+	font-size: 22px;
+	font-weight: 600px;
+	background-color: tomato;
+	border:none;
+	outline: none;
+	border-radius: 57px 0px 51px 0px;
+	color: #fff;
+	padding: 6px 25px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+.MyButton button:hover{
+	background-color:rgb(29,194,194);
+}
+
+.RulesBox{
+	position: absolute;
+	width: 320px;
+	height: 580px;
+	top:50%;
+	left: 50%;
+	background-color: #fff;
+	box-shadow: rgb(0 0 0 /10%) 0px 10px 50px;
+	transform: translate(-50%,-50%);
+}
+.RulesTitle{
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid lightgray;
+	border-radius: 0px;
+	padding: 5px;
+}
+.RulesList{
+	width: 80%;
+	margin: auto;
+}
+ ol li{
+font-size: 17px;
+font-weight: 500px;
+padding: 10px 25px;
+}
+.buttons button{
+	font-size: 22px;
+	font-weight: 600px;
+	background-color: tomato;
+	border:none;
+	outline: none;
+	margin-top: 20px;
+	
+	color: #fff;
+	padding: 6px 25px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+.exit{
+	border-radius: 0px 47px 0px 46px;
+}
+.exit:hover{
+	background-color:blue;
+}
+.continue{
+	border-radius: 57px 0px 46px 0px;
+	margin-left: 64px;
+}
+.continue:hover{
+	background-color:rgb(29,194,194);
 }
