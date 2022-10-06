@@ -27,11 +27,11 @@ body{
 	width: 100%;
 
 }
-.text{
+.text1{
 	width: 90%;
 	margin: auto;
 }
-.text h3{
+.text1 h3{
 	margin-top: 20px;
 }
 .MyButton{
@@ -54,6 +54,12 @@ body{
 .MyButton button:hover{
 	background-color:rgb(29,194,194);
 }
+.RulesBox.activeInfo{
+	opacity: 1;
+	z-index: 5;
+	pointer-events: auto;
+	transform: translate(-50%,-50%) scale(1);
+}
 
 .RulesBox{
 	position: absolute;
@@ -64,6 +70,8 @@ body{
 	background-color: #fff;
 	box-shadow: rgb(0 0 0 /10%) 0px 10px 50px;
 	transform: translate(-50%,-50%);
+	opacity: 0;
+	pointer-events: none;
 }
 .RulesTitle{
 	text-align: center;
