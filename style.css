@@ -109,15 +109,21 @@ padding: 10px 25px;
 .exit:hover{
 	background-color:blue;
 }
-.continue{
+.ContinueButton{
 	border-radius: 57px 0px 46px 0px;
 	margin-left: 64px;
 }
-.continue:hover{
+.ContinueButton:hover{
 	background-color:rgb(29,194,194);
 }
+.Questions.activeQuiz{
+	opacity: 1;
+	z-index: 5;
+	pointer-events: auto;
+	transform: translate(-50%,-50%) scale(1);
+}
 
-.questions{
+.Questions{
 	width: 320px;
 	height: 580px;
 	position: absolute;
@@ -127,6 +133,8 @@ padding: 10px 25px;
 	box-shadow: rgb(0,0,0 / 10%) 0px 10px 50px;
 	transform: translate(-50%,-50%);
 	border-radius: 48px;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .header{
