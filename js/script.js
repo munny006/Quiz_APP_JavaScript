@@ -1,5 +1,5 @@
  const MyButton = document.querySelector(".MyButton button");
- const RulesBox = document.querySelector("RulesBox");
+ const RulesBox = document.querySelector(".RulesBox");
 
 
 
