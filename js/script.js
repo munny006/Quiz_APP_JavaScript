@@ -45,4 +45,32 @@ function showQuestions(index){
 	const total_que = document.querySelector('.total_que');
 	let total_quetag = '<p>' + questions[index].numb +  ' of 5 </p>'
 	total_que.innerHTML = total_quetag;
+
+
+	const option = Option_list.querySelectorAll(".options");
+	for(let i = 0; i< option.length; i++){
+		option[i].setAttribute("onclick","optionSelected(this)");
+	}
+}
+
+function optionSelected(anser){
+	let userAns = anser.textContent;
+	let correctAns = questions[que_count].anser;
+	let alloptions = Option_list.children.length;
+	
+	if(userAns == correctAns){
+		anser.classList.add('correct');
+		console.log("Answer Is Correct");
+	}
+	else {
+
+		anser.classList.add('Incorrect');
+		console.log("Answer is wrong");
+		for(let i = 0 ; i<alloptions; i++){
+			if(Option_list.children[i].textContent = correctAns){
+				Option_list.children[i].setAttribute("class","options correct");
+			}
+		}
+	}
+	
 }
