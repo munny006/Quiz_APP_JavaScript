@@ -28,13 +28,13 @@ let questions = [
 {
 		numb:3,
 		question : 'What Does PHP Stand For?',
-		anser:  'Cascading style sheet',
+		anser:  'Hypertext Preprocessor',
 		option:[
 
-		   "common style sheet",
-		   "colorful style sheet",
-		   "computer style sheet",
-		   "Cascading style sheet"
+		   "Hypertext Preprocessor",
+		   "Pretext Hypertext Preprocessor",
+		   "Personal Home Processor",
+		   "None of the above"
 
 		]
 	},

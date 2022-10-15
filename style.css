@@ -20,6 +20,7 @@ body{
 	background-color: #fff;
 	box-shadow: rgb(0 0 0 /10%) 0px 10px 50px;
 	transform: translate(-50%,-50%);
+	display: none;
 
     
 }
@@ -241,6 +242,7 @@ footer button{
 	color: #f1f1f1;
 	transition: all 0.3s ease;
 	margin-top: 11px;
+	display: none;
 }
 footer .nextBtn:hover{
 	background-color: rgb(29,194,194);
@@ -256,4 +258,72 @@ footer .nextBtn:hover{
 	color: #721c24!important;
 	background: #f8d7da!important;
 	border:1px solid #f5c6cb!important;
+}
+.options.disabled{
+	pointer-events: none!important;
+}
+
+.result_box{
+	width: 320px;
+	height: 580px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+	display: flex;
+	background-color: #fff;
+	border-radius: 45px;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	transition: all 0.3s ease;
+	opacity: 1;
+}
+
+.ResultImg img{
+	width: 100%;
+	height: 179px;
+	margin-bottom: 180px;
+}
+.complete_text{
+	font-size: 20px;
+	font-weight: 500;
+}
+.score span{
+	display: flex;
+	margin: 10px 0;
+	font-size: 18px;
+	font-weight: 500;
+}
+.score span p{
+	padding: 0 4px;
+	font-weight: 600;
+}
+
+.result_box .btm{
+	display: flex;margin: 20px 0px;
+}
+.result_box .btm button{
+	margin: 0 10px;
+	height: 45px;
+	padding: 0 20px;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+	border:none;
+	outline: none;
+	border-radius: 25px;
+	transition: all 0.3s ease;
+}
+.restrt1{
+	background-color: tomato;
+}
+.restrt1:hover{
+	background-color: rgb(29,194,194);
+}
+.quick{
+	background-color:#0080808c;
+}
+.quick:hover{
+	background-color:#4c008054;
 }

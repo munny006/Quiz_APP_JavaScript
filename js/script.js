@@ -3,6 +3,9 @@
  const exit = document.querySelector(".buttons .exit");
  const ContinueButton = document.querySelector(".buttons .ContinueButton");
  const Questions = document.querySelector(".Questions");
+ const Option_list = document.querySelector(".MyOption");
+
+ const timeCount = document.querySelector(".TimeCount .Sec");
 
 MyButton.onclick = () => {
 	RulesBox.classList.add("activeInfo");
@@ -16,15 +19,23 @@ ContinueButton.onclick = () => {
 	RulesBox.classList.remove("activeInfo");
 	Questions.classList.add("activeQuiz");
 	showQuestions(0);
+	startTimer(12);
 }
 
 let que_count = 0;
+let counter;
+
+let timeValue = 12;
 
 const nextBtn = document.querySelector(".nextBtn");
+
 nextBtn.onclick = () => {
 	if(que_count < questions.length - 1){
 		que_count ++ ;
-		showQuestions(que_count)
+		showQuestions(que_count);
+		clearInterval(counter);
+		startTimer(timeValue);
+		nextBtn.style.display = "none";
 	}
 	else{
 		console.log("You Have Completd Your Task") ;
@@ -52,25 +63,47 @@ function showQuestions(index){
 		option[i].setAttribute("onclick","optionSelected(this)");
 	}
 }
+let tickIcon = '<div class="tick icon"><i class="fa fa-check"></i></div>';
+let crossIcon = '<div class="cross"><i class="fa fa-times"></i></div>';
 
 function optionSelected(anser){
+	clearInterval(counter);
 	let userAns = anser.textContent;
 	let correctAns = questions[que_count].anser;
-	let alloptions = Option_list.children.length;
+	
 	
 	if(userAns == correctAns){
 		anser.classList.add('correct');
 		console.log("Answer Is Correct");
+		anser.insertAdjacentHTML("beforeend",tickIcon);
+
 	}
 	else {
 
 		anser.classList.add('Incorrect');
 		console.log("Answer is wrong");
-		for(let i = 0 ; i<alloptions; i++){
-			if(Option_list.children[i].textContent = correctAns){
-				Option_list.children[i].setAttribute("class","options correct");
-			}
-		}
+		anser.insertAdjacentHTML("beforeend",crossIcon);
+		
 	}
-	
+
+nextBtn.style.display = "block";
+
+
+
+}
+
+function startTimer(time){
+	counter = setInterval(timer, 1000);
+function timer(){
+	timeCount.textContent = time;
+	time --;
+	if(time < 9){
+		let addZero = timeCount.textContent;
+		timeCount.textContent = 0 +addZero ;
+	}
+	if(time < 0 ){
+		clearInterval(counter);
+		timeCount.textContent = "00";
+	}
+}
 }
