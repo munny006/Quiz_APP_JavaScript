@@ -43,7 +43,7 @@ let questions = [
 	{
 		numb:4,
 		question : 'What Does SQL Stand For?',
-		anser:  'Cascading style sheet',
+		anser:  'Stylisheet Query Language',
 		option:[
 
 		   "Stylish Question Language",
@@ -58,7 +58,7 @@ let questions = [
 	{
 		numb:5,
 		question : 'What Does XML Stand For?',
-		anser:  'Cascading style sheet',
+		anser:  'eXtensible Markup Language',
 		option:[
 
 		   "eXtensible Markup Language",

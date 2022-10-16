@@ -25,9 +25,20 @@ ContinueButton.onclick = () => {
 let que_count = 0;
 let counter;
 
-let timeValue = 12;
+let timeValue  = 12;
+let userscore  = 0;
+
 
 const nextBtn = document.querySelector(".nextBtn");
+
+const Result_box = document.querySelector(".result_box");
+
+const quickButton = document.querySelector(".btm .quick");
+
+
+quickButton.onclick = () =>{
+	window.location.reload();
+}
 
 nextBtn.onclick = () => {
 	if(que_count < questions.length - 1){
@@ -39,6 +50,7 @@ nextBtn.onclick = () => {
 	}
 	else{
 		console.log("You Have Completd Your Task") ;
+		showResult();
 	}
 }
 
@@ -73,6 +85,8 @@ function optionSelected(anser){
 	
 	
 	if(userAns == correctAns){
+		userscore +=1;
+		console.log(userscore);
 		anser.classList.add('correct');
 		console.log("Answer Is Correct");
 		anser.insertAdjacentHTML("beforeend",tickIcon);
@@ -91,6 +105,25 @@ nextBtn.style.display = "block";
 
 
 }
+
+function showResult(){
+	RulesBox.classList.remove("activeInfo");
+	Questions.classList.remove("activeQuiz");
+    Result_box.classList.add("activeResult");
+	const ScoreText = document.querySelector(".score");
+	if(userscore > 3){
+		let scoreTag = '<span">Congratulations!You Got <p>' + userscore +'</p> Out OF <p>'+ questions.length+'</p></span>';
+		ScoreText.innerHTML = scoreTag;
+	}
+	else if(userscore > 1){
+		let scoreTag ='<span>Carry on You Got<p>'+ userscore +'</p> Out OF<p>'+ questions.length +'</p></span>';
+		ScoreText.innerHTML = scoreTag;
+	}
+	else{
+		let scoreTag = '<span>I am Sorry You Got <p> '+ userscore +'</p> Out OF<p>'+ questions.length +'</p></span>';
+		ScoreText.innerHTML =scoreTag;
+	}
+} 
 
 function startTimer(time){
 	counter = setInterval(timer, 1000);

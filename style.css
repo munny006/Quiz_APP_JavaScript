@@ -20,8 +20,7 @@ body{
 	background-color: #fff;
 	box-shadow: rgb(0 0 0 /10%) 0px 10px 50px;
 	transform: translate(-50%,-50%);
-	display: none;
-
+	
     
 }
 .img img{
@@ -269,7 +268,7 @@ footer .nextBtn:hover{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50% , -50%);
+	
 	display: flex;
 	background-color: #fff;
 	border-radius: 45px;
@@ -277,7 +276,9 @@ footer .nextBtn:hover{
 	flex-direction: column;
 	justify-content: center;
 	transition: all 0.3s ease;
-	opacity: 1;
+	transform: translate(-50% , -50%) scale(0.9);
+	opacity: 0;
+	pointer-events: none;
 }
 
 .ResultImg img{
@@ -326,4 +327,11 @@ footer .nextBtn:hover{
 }
 .quick:hover{
 	background-color:#4c008054;
+}
+
+.result_box.activeResult{
+	z-index: 5;
+	opacity: 1;
+	transform: translate(-50%,-50%) scale(1);
+	pointer-events: auto;
 }
